@@ -7,6 +7,9 @@ function App() {
         <FaBitcoin size="48px" style={{ margin: "10px", marginTop: "12px", color: "#F2A900"}}/>
         <h1>Bitcoin Budget</h1>
       </header>
+      <main>
+        <p>Welcome to the Bitcoin Budget app</p>
+      </main>
     </div>
   );
 }
