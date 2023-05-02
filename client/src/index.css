@@ -17,7 +17,7 @@ code {
   align-items: center;
 }
 
-.App-header {
+.App header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -27,4 +27,11 @@ code {
 .App h1 {
   margin: 0px;
   font-size: 60px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
