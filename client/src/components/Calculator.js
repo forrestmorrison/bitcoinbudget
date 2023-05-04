@@ -12,13 +12,19 @@ const Calculator = () => {
             <TextField 
                 id="outlined-basic" 
                 label="amount" 
-                variant="outlined" 
+                variant="outlined"
+                sx={{
+                    m: 1
+                }}
             />
             <TextField 
                 id="outlined-select"
                 select
                 label="frequency" 
-                variant="outlined" 
+                variant="outlined"
+                sx={{
+                    m: 1
+                }}
             />
             <Button>Calculate</Button>
         </Box>

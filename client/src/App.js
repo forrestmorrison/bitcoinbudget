@@ -1,7 +1,9 @@
 import { FaBitcoin } from "react-icons/fa"
+import { Routes, Route } from "react-router-dom"
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react';
 import Calculator from "./components/Calculator";
+import Home from "./pages/Home"
 
 const theme = createTheme({
   palette: {
@@ -30,6 +32,9 @@ function App() {
         </header>
         <main>
           <p>Welcome to the Bitcoin Budget app</p>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+          </Routes>
           <Calculator />
         </main>
       </div>
