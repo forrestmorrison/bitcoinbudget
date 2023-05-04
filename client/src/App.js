@@ -4,6 +4,8 @@ import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react';
 import Calculator from "./components/Calculator";
 import Home from "./pages/Home"
+import Login from "./auth/Login";
+import Signup from "./auth/Signup";
 
 const theme = createTheme({
   palette: {
@@ -34,6 +36,8 @@ function App() {
           <p>Welcome to the Bitcoin Budget app</p>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<Signup />} />
           </Routes>
           <Calculator />
         </main>
