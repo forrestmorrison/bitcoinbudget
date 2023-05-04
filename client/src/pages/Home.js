@@ -1,8 +1,10 @@
-import React from 'react'
+import Calculator from "../components/Calculator";
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Calculator />
+    </div>
   )
 }
 
