@@ -1,4 +1,4 @@
-import { Button, Box, MenuItem, TextField, Typography} from "@mui/material"
+import { Button, Box, MenuItem, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, TextField, Typography} from "@mui/material"
 
 const currencies = [
     {
@@ -133,6 +133,17 @@ const Calculator = () => {
                 </TextField>
             </div>
             <Button>Calculate</Button>
+            <FormControl>
+                <FormLabel id="demo-radio-buttons-group-label">total amount:</FormLabel>
+                <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                >
+                    <FormControlLabel value="current-btc-price" control={<Radio />} label="current BTC price" />
+                    <FormControlLabel value="target-btc-price" control={<Radio />} label="enter target BTC price" />
+                </RadioGroup>
+            </FormControl>
         </Box>
     </div>
   )
