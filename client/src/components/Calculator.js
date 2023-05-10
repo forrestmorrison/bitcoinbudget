@@ -1,4 +1,4 @@
-import { Button, Box, MenuItem, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, TextField, Typography} from "@mui/material"
+import { Button, Box, MenuItem, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, TextField, Typography, Grow} from "@mui/material"
 
 const currencies = [
     {
@@ -61,7 +61,7 @@ const Calculator = () => {
             noValidate
             autoComplete="off"
         >
-            <div>
+            <section>
                 <TextField 
                     id="outlined-basic" 
                     label="currency amount" 
@@ -78,7 +78,7 @@ const Calculator = () => {
                     helperText="select btc or usd"
                     variant="outlined"
                     sx={{
-                        m: 1
+                        m: 1,
                     }}
                 >
                     {currencies.map((option) => (
@@ -87,13 +87,13 @@ const Calculator = () => {
                         </MenuItem>
                     ))}
                 </TextField>
-            </div>
+            </section>
             <TextField 
                 id="outlined-select"
                 select
                 label="frequency"
                 defaultValue=""
-                helperText="please select frequency"
+                helperText="select frequency"
                 variant="outlined"
                 sx={{
                     m: 1
@@ -105,7 +105,7 @@ const Calculator = () => {
                     </MenuItem>
                 ))}
             </TextField>
-            <div>
+            <section>
                 <TextField 
                     id="outlined-basic" 
                     label="time amount" 
@@ -119,7 +119,7 @@ const Calculator = () => {
                     select
                     label="time period"
                     defaultValue=""
-                    helperText="please select time period"
+                    helperText="select time period"
                     variant="outlined"
                     sx={{
                         m: 1
@@ -131,19 +131,51 @@ const Calculator = () => {
                         </MenuItem>
                     ))}
                 </TextField>
-            </div>
-            <Button>Calculate</Button>
+            </section>
             <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">total amount:</FormLabel>
+                <FormLabel id="demo-radio-buttons-group-label">at price of:</FormLabel>
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
                     defaultValue="female"
                     name="radio-buttons-group"
+                    sx={{
+                        display: "flex",
+                        flexDirection: "row"
+                    }}
                 >
-                    <FormControlLabel value="current-btc-price" control={<Radio />} label="current BTC price" />
-                    <FormControlLabel value="target-btc-price" control={<Radio />} label="enter target BTC price" />
+                    <FormControlLabel 
+                        value="current-btc-price" 
+                        control={<Radio />} 
+                        label="current BTC price"
+                        sx={{
+                            m: 1
+                        }}
+                    />
+                    <FormControlLabel 
+                        value="target-btc-price" 
+                        control={<Radio />} 
+                        label={<TextField label="enter target BTC price" />} 
+                        sx={{
+                            m: 1
+                        }}
+                    />
                 </RadioGroup>
             </FormControl>
+            <Button
+                sx={{
+                    m: 1,
+                    backgroundColor: "#F2A900",
+                    color: "white",
+                        "&:hover": {
+                            backgroundColor: "white",
+                            color: "#F2A900",
+                        },
+                        "&.Mui-disabled": {
+                            background: "white",
+                            color: "grey"
+                        }
+                }}
+            >Calculate</Button>
         </Box>
     </div>
   )

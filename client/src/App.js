@@ -32,7 +32,6 @@ function App() {
           <h1>Bitcoin Budget</h1>
         </header>
         <main>
-          <p>Welcome to the Bitcoin Budget app</p>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
