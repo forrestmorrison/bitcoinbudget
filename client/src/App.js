@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react';
 import Home from "./pages/Home"
+import Nav from "./components/Nav";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 
@@ -28,8 +29,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header>
-          <FaBitcoin size="48px" style={{ margin: "10px", marginTop: "12px", color: "#F2A900"}}/>
-          <h1>Bitcoin Budget</h1>
+          <Nav />
         </header>
         <main>
           <Routes>
