@@ -1,4 +1,16 @@
-import { Button, Box, MenuItem, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, TextField, Typography, Grow} from "@mui/material"
+import { useState } from "react"
+import { 
+    Button, 
+    Box, 
+    MenuItem, 
+    Radio, 
+    RadioGroup, 
+    FormControlLabel, 
+    FormControl, 
+    FormLabel, 
+    TextField
+} from "@mui/material"
+
 
 const currencies = [
     {
@@ -50,135 +62,138 @@ const timePeriods = [
 ]
 
 const Calculator = () => {
-  return (
-    <div>
-        <Box
-            component="form"
-            sx={{
-                display: "flex",
-                flexDirection: "column"
-            }}
-            noValidate
-            autoComplete="off"
-        >
-            <section>
+
+    const [total, setTotal] = useState(0)
+
+    return (
+        <div>
+            <Box
+                component="form"
+                sx={{
+                    display: "flex",
+                    flexDirection: "column"
+                }}
+                noValidate
+                autoComplete="off"
+            >
+                <section>
+                    <TextField 
+                        id="outlined-basic" 
+                        label="currency amount" 
+                        variant="outlined"
+                        sx={{
+                            m: 1
+                        }}
+                    />
+                    <TextField 
+                        id="outlined-select"
+                        select
+                        label="currency"
+                        defaultValue=""
+                        helperText="select btc or usd"
+                        variant="outlined"
+                        sx={{
+                            m: 1,
+                        }}
+                    >
+                        {currencies.map((option) => (
+                            <MenuItem key={option.value} value={option.value}>
+                                {option.label}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </section>
                 <TextField 
-                    id="outlined-basic" 
-                    label="currency amount" 
+                    id="outlined-select"
+                    select
+                    label="frequency"
+                    defaultValue=""
+                    helperText="select frequency"
                     variant="outlined"
                     sx={{
                         m: 1
                     }}
-                />
-                <TextField 
-                    id="outlined-select"
-                    select
-                    label="currency"
-                    defaultValue=""
-                    helperText="select btc or usd"
-                    variant="outlined"
+                >
+                    {frequencies.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                            {option.label}
+                        </MenuItem>
+                    ))}
+                </TextField>
+                <section>
+                    <TextField 
+                        id="outlined-basic" 
+                        label="time amount" 
+                        variant="outlined"
+                        sx={{
+                            m: 1
+                        }}
+                    />
+                    <TextField 
+                        id="outlined-select"
+                        select
+                        label="time period"
+                        defaultValue=""
+                        helperText="select time period"
+                        variant="outlined"
+                        sx={{
+                            m: 1
+                        }}
+                    >
+                        {timePeriods.map((option) => (
+                            <MenuItem key={option.value} value={option.value}>
+                                {option.label}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </section>
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">at price of:</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row"
+                        }}
+                    >
+                        <FormControlLabel 
+                            value="current-btc-price" 
+                            control={<Radio />} 
+                            label="current BTC price"
+                            sx={{
+                                m: 1
+                            }}
+                        />
+                        <FormControlLabel 
+                            value="target-btc-price" 
+                            control={<Radio />} 
+                            label={<TextField label="enter target BTC price" />} 
+                            sx={{
+                                m: 1
+                            }}
+                        />
+                    </RadioGroup>
+                </FormControl>
+                <Button
                     sx={{
                         m: 1,
+                        backgroundColor: "#F2A900",
+                        color: "white",
+                            "&:hover": {
+                                backgroundColor: "white",
+                                color: "#F2A900",
+                            },
+                            "&.Mui-disabled": {
+                                background: "white",
+                                color: "grey"
+                            }
                     }}
-                >
-                    {currencies.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                            {option.label}
-                        </MenuItem>
-                    ))}
-                </TextField>
-            </section>
-            <TextField 
-                id="outlined-select"
-                select
-                label="frequency"
-                defaultValue=""
-                helperText="select frequency"
-                variant="outlined"
-                sx={{
-                    m: 1
-                }}
-            >
-                {frequencies.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                        {option.label}
-                    </MenuItem>
-                ))}
-            </TextField>
-            <section>
-                <TextField 
-                    id="outlined-basic" 
-                    label="time amount" 
-                    variant="outlined"
-                    sx={{
-                        m: 1
-                    }}
-                />
-                <TextField 
-                    id="outlined-select"
-                    select
-                    label="time period"
-                    defaultValue=""
-                    helperText="select time period"
-                    variant="outlined"
-                    sx={{
-                        m: 1
-                    }}
-                >
-                    {timePeriods.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                            {option.label}
-                        </MenuItem>
-                    ))}
-                </TextField>
-            </section>
-            <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">at price of:</FormLabel>
-                <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="female"
-                    name="radio-buttons-group"
-                    sx={{
-                        display: "flex",
-                        flexDirection: "row"
-                    }}
-                >
-                    <FormControlLabel 
-                        value="current-btc-price" 
-                        control={<Radio />} 
-                        label="current BTC price"
-                        sx={{
-                            m: 1
-                        }}
-                    />
-                    <FormControlLabel 
-                        value="target-btc-price" 
-                        control={<Radio />} 
-                        label={<TextField label="enter target BTC price" />} 
-                        sx={{
-                            m: 1
-                        }}
-                    />
-                </RadioGroup>
-            </FormControl>
-            <Button
-                sx={{
-                    m: 1,
-                    backgroundColor: "#F2A900",
-                    color: "white",
-                        "&:hover": {
-                            backgroundColor: "white",
-                            color: "#F2A900",
-                        },
-                        "&.Mui-disabled": {
-                            background: "white",
-                            color: "grey"
-                        }
-                }}
-            >Calculate</Button>
-        </Box>
-    </div>
-  )
+                >Calculate</Button>
+            </Box>
+        </div>
+    )
 }
 
 export default Calculator
