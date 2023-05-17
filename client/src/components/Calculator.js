@@ -76,6 +76,7 @@ const Calculator = () => {
                 noValidate
                 autoComplete="off"
             >
+                <p>amount you would like to purchase on a recurring basis:</p>
                 <section>
                     <TextField 
                         id="outlined-basic" 
@@ -103,6 +104,7 @@ const Calculator = () => {
                         ))}
                     </TextField>
                 </section>
+                <p>frequency rate to make recurring purchase:</p>
                 <TextField 
                     id="outlined-select"
                     select
@@ -120,6 +122,7 @@ const Calculator = () => {
                         </MenuItem>
                     ))}
                 </TextField>
+                <p>total amount of time to keep making recurring purchase:</p>
                 <section>
                     <TextField 
                         id="outlined-basic" 
@@ -148,7 +151,7 @@ const Calculator = () => {
                     </TextField>
                 </section>
                 <FormControl>
-                    <FormLabel id="demo-radio-buttons-group-label">at price of:</FormLabel>
+                    <p>at price of:</p>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
                         defaultValue="female"

@@ -1,5 +1,4 @@
-import { FaBitcoin } from "react-icons/fa"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react';
 import Home from "./pages/Home"
