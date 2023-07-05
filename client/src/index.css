@@ -21,7 +21,7 @@ code {
   align-items: center;
 }
 
-.App header {
+.App header a {
   margin: 10px;
   display: flex;
   flex-direction: row;
@@ -32,6 +32,11 @@ code {
 .App h1 {
   margin: 0px;
   font-size: 60px;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
