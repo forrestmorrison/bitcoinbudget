@@ -63,6 +63,12 @@ const timePeriods = [
 
 const Calculator = () => {
 
+    const [currencyAmount, setCurrencyAmount] = useState(0)
+    const [currency, setCurrency] = useState("")
+    const [frequency, setFrequency] = useState("")
+    const [timeAmount, setTimeAmount] = useState(0)
+    const [timePeriod, setTimePeriod] = useState("")
+    const [price, setPrice] = useState(0)
     const [total, setTotal] = useState(0)
 
     return (
