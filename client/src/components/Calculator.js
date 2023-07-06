@@ -63,10 +63,10 @@ const timePeriods = [
 
 const Calculator = () => {
 
-    const [currencyAmt, setCurrencyAmt] = useState(0)
+    const [currencyAmt, setCurrencyAmt] = useState(null)
     const [currency, setCurrency] = useState("")
     const [frequency, setFrequency] = useState("")
-    const [timeAmt, setTimeAmt] = useState(0)
+    const [timeAmt, setTimeAmt] = useState(null)
     const [timePeriod, setTimePeriod] = useState("")
     const [price, setPrice] = useState(0)
     const [total, setTotal] = useState(0)
@@ -114,8 +114,11 @@ const Calculator = () => {
                 <section>
                     <TextField 
                         id="outlined-basic" 
-                        label="currency amount" 
+                        label="currency amount"
                         variant="outlined"
+                        onChange={onCurrencyAmtChange}
+                        value={currencyAmt}
+                        required
                         sx={{
                             m: 1
                         }}
@@ -127,6 +130,9 @@ const Calculator = () => {
                         defaultValue=""
                         helperText="select btc or usd"
                         variant="outlined"
+                        onChange={onCurrencyChange}
+                        value={currency}
+                        required
                         sx={{
                             m: 1,
                         }}
@@ -146,6 +152,9 @@ const Calculator = () => {
                     defaultValue=""
                     helperText="select frequency"
                     variant="outlined"
+                    onChange={onFrequencyChange}
+                        value={frequency}
+                        required
                     sx={{
                         m: 1
                     }}
@@ -162,6 +171,9 @@ const Calculator = () => {
                         id="outlined-basic" 
                         label="time amount" 
                         variant="outlined"
+                        onChange={onTimeAmtChange}
+                        value={timeAmt}
+                        required
                         sx={{
                             m: 1
                         }}
@@ -173,6 +185,9 @@ const Calculator = () => {
                         defaultValue=""
                         helperText="select time period"
                         variant="outlined"
+                        onChange={onTimePeriodChange}
+                        value={timePeriod}
+                        required
                         sx={{
                             m: 1
                         }}
