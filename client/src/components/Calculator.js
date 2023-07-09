@@ -63,10 +63,10 @@ const timePeriods = [
 
 const Calculator = () => {
 
-    const [currencyAmt, setCurrencyAmt] = useState(null)
+    const [currencyAmt, setCurrencyAmt] = useState("")
     const [currency, setCurrency] = useState("")
     const [frequency, setFrequency] = useState("")
-    const [timeAmt, setTimeAmt] = useState(null)
+    const [timeAmt, setTimeAmt] = useState("")
     const [timePeriod, setTimePeriod] = useState("")
     const [price, setPrice] = useState(0)
     const [total, setTotal] = useState(0)
@@ -98,6 +98,13 @@ const Calculator = () => {
     const onTotalChange = (e) => {
         setTotal(e.target.value)
     }
+
+    const calculate = (currencyAmt, timeAmt) => {
+        const total = currencyAmt * timeAmt
+        return total
+    }
+
+    console.log(calculate(4, 5))
 
     return (
         <div>
