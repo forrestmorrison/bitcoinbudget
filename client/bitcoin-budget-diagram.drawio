@@ -1,11 +1,29 @@
-<mxfile host="app.diagrams.net" modified="2023-07-06T03:44:21.083Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="P7ipXIKFK5vAyaURcoWV" version="21.2.3" type="device">
+<mxfile host="app.diagrams.net" modified="2023-07-09T03:13:03.561Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="OtMXlZgLtAldk0i7H001" version="21.6.1" type="device">
   <diagram name="Page-1" id="iZxBaLD5PZfXVyYoHGpI">
-    <mxGraphModel dx="882" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="GoXdwt_rAodtYOb4qLiQ-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="220" width="170" height="100" as="geometry" />
+        <mxCell id="GoXdwt_rAodtYOb4qLiQ-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="760" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-2" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;currencyAmt&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="130" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-3" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;currency&lt;br&gt;(BTC or USD)&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="110" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;frequency rate&lt;br&gt;(once per day,&lt;br&gt;once per week,&lt;br&gt;once per year)&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-5" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;timeAmt&lt;br&gt;(enter numerical value)&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="112.5" y="360" width="265" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;timePeriod&lt;br&gt;(days, weeks, months, years)&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="360" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ny3iHW43eVZhzrGnbmXv-9" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;current BTC price or target BTC price&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="215" y="480" width="410" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
