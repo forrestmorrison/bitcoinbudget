@@ -5,7 +5,7 @@ import axios from "axios"
 const BitcoinPrice = () => {
   const [coins, setCoins] = useState([])
 
-  const url = "/"
+  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=1&page=1&sparkline=false&locale=en&precision=2"
 
   useEffect(() => {
     axios.get(url).then((res) => {
